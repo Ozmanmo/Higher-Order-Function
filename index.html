@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="stylesheet" href="styles.css"/>
+    <title>Higher order functions</title>
+</head>
+<style>
+    .collapsible{
+    background-color:#eee;
+    color:#444;
+    cursor:pointer;
+    padding:18px;
+    width:100%;
+    border:none;
+    text-align:left;
+    outline:none;
+    font-size:15px;
+}
+
+/* chevron icon*/
+.collapsible::before{
+content:"\002B";
+color: white;
+font-weight: bold;
+float:left;
+margin-right:6px;
+}
+/* The chevron icon when the collapsible content 
+is collapsed*/
+.collapsible.collapsed::before{
+    content:"002B";
+}
+
+/* style for the content when the collapsible content 
+is collapsed*/
+.colapsible-content {
+    padding:0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+</style>
+<body>
+    <button class ="collapsible">Click me to toggle the content</button>
+    <div class="collapsible-content">
+        <p class="map">
+            map : This function takes an array and a function as arguments,
+            applies the function to each element of the array and returns
+            a new array with the modified elements.
+        </p>
+    </div>
+    <button class ="collapsible">Click me to toggle the content</button>
+    <div class="collapsible-content">
+        <p class="filter">
+            filter : This function takes an array and a function as arguments,
+            applies the function to each element of the array, and returns 
+            a new array with only the elements that pass the test.
+        </p>
+    </div>
+    <button class ="collapsible">Click me to toggle the content</button>
+    <div class="collapsible-content">
+        <p class="reduce">
+            reduce: This function takes an array, a function and an initial
+            value as arguments, applies the function to each element of the 
+            array and reduces the array to a single value.
+        </p>
+    </div>
+    <button class ="collapsible">Click me to toggle the content</button>
+    <div class="collapsible-content">
+        <p class="forEach">
+            forEach : This function takes an array and a function as arguments
+            applies the function to each element of the array and returns nothing.
+        </p>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
